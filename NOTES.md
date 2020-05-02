@@ -33,8 +33,14 @@ resource 1:\* projects
    - import db ('../data/config')
    - module.export
 10. projects router
-    - add projects
+    - add projects ({name: ?, finished: 0/1})
     - retrieve list of projects
+11. resources router
+    - add resources ({name: ?})
+    - retrieve list of resources
+12. tasks router
+    - add tasks ({description: ?, project_id: (int), finsihed: 0/1})
+    - retrieve list of tasks
 
 **TIPS**
 

@@ -15,7 +15,6 @@ router.post("/", async (req, res, next) => {
   try {
     const projData = req.body;
     const newProj = await db("projects").insert(projData);
-    // const newProj = await db("projects").where({ id });
 
     res.json(newProj);
   } catch (err) {

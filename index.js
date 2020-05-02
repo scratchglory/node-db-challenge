@@ -2,8 +2,8 @@ const express = require("express");
 // helps secure express apps by setting various HTTP headers
 const helmet = require("helmet");
 const projectsRouter = require("./routers/projects");
-// const resourcesRouter = require("./routers/resources")
-// const tasksRouter = reuqire("./routers/tasks")
+const resourcesRouter = require("./routers/resources");
+const tasksRouter = require("./routers/tasks");
 // const ptRouter = reuqire("./routers/projects-tasks")
 
 const server = express();
@@ -13,6 +13,8 @@ server.use(helmet());
 server.use(express.json());
 
 server.use("/projects", projectsRouter);
+server.use("/resources", resourcesRouter);
+server.use("/tasks", tasksRouter);
 
 server.use((req, res, next) => {
   console.log(err);
